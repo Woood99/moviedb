@@ -1,5 +1,63 @@
 <section class="hero">
-    <div class="container">
-        
+    <div class="hero__breadcrumbs breadcrumbs">
+        <ul class="breadcrumbs__list list-reset">
+            <li class="breadcrumbs__item">
+                <a href="#">
+                    Главная
+                </a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="#">
+                    Подборки
+                </a>
+            </li>
+            <li class="breadcrumbs__item breadcrumbs__item--last">
+                <span>
+                    Лучшие фильмы всех времен
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="hero__inner">
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slide" style="background-image: url(img/hero-slide/hero-slide-1.jpg);">
+                    <div class="hero-slide__inner">
+                        <h1 class="hero-slide__title title-1">
+                            Лучшие фильмы всех времен
+                        </h1>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slide" style="background-image: url(img/hero-slide/hero-slide-2.jpg);">
+                    <div class="hero-slide__inner">
+                        <h1 class="hero-slide__title title-1">
+                            Лучшие фильмы всех времен
+                        </h1>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slide" style="background-image: url(img/hero-slide/hero-slide-1.jpg);">
+                    <div class="hero-slide__inner">
+                        <h1 class="hero-slide__title title-1">
+                            Лучшие фильмы всех времен
+                        </h1>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slide" style="background-image: url(img/hero-slide/hero-slide-2.jpg);">
+                    <div class="hero-slide__inner">
+                        <h1 class="hero-slide__title title-1">
+                            Лучшие фильмы всех времен
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slider-pagination swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="hero__text">
+        Мы собрали для Вас подборку лучших фильмов по теме “{название подборки}” с рейтингом от {минимальный рейтинг
+        фильмов из подборки} и до {максимальный рейтинг фильмов из подборки}. В неё вошли фильмы следующих жанров:
+        {жанр1}({число раз}), {жанр2}({число раз}), {жанр3}({число раз}). Самый новый фильм - {год} года, самый старый
+        фильм - {год} года. Продолжительность фильмов от {минимальная продолжительность} до {максимальная
+        продолжительность}. Выбирайте фильм и приятного просмотра!
     </div>
 </section>

@@ -72,11 +72,27 @@
 
 
 // Подключение свайпера
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
-// });
+import Swiper, {
+    Navigation,
+    Pagination
+} from 'swiper';
+Swiper.use([Navigation, Pagination]);
+if (document.querySelector('.hero-slider')) {
+    document.querySelectorAll('.hero-slider').forEach(el => {
+        const heroSlider = new Swiper(el, {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            speed: 750,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            pagination: {
+                el: el.querySelector('.hero-slider-pagination'),
+                clickable: true,
+            },
+        });
+    });
+}
 
 
 // ========================================================================================

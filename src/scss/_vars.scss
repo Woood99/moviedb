@@ -3,7 +3,7 @@ $fontFamily: "Roboto";
 $fontSize: 18;
 $minWidth: 320;
 $maxWidth: 1920;
-$contentWidth: 1770;
+$contentWidth: 1800;
 $containerOffset: 15;
 $containerWidth: calc($contentWidth + ($containerOffset * 2));
 
@@ -28,7 +28,7 @@ $borderColor: #2B2B2B;
 // others vars
 $transitionSpeed: 0.25s;
 $transitionFunction: ease-out;
-
+$fontFamilyPhilosopher: 'Philosopher', sans-serif;
 
 
 

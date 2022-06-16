@@ -8,8 +8,13 @@
 <body class="page__body">
     <div class="site-container">
         @include('partials/header.html')
-        <main class="main">
-            @include('partials/hero.html')
+        <main class="main grid container">
+            <div class="grid__column">
+                @include('partials/hero.html')
+            </div>
+            <div class="grid__column">
+
+            </div>
         </main>
         @include('partials/footer.html')
     </div>

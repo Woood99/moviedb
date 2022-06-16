@@ -1,0 +1,43 @@
+.breadcrumbs {
+   background: rgba(22, 26, 25, 0.35);
+   border-radius: 5px 5px 0px 0px;
+    padding: 20px;
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        color: #DBDBDB;
+        position: relative;
+
+        &::after {
+            content: '/';
+            position: absolute;
+            top: 0;
+            right: -12px;
+        }
+
+        &:not(:first-child) {
+            margin-left: 18px;
+        }
+
+        a {
+            transition: color $transitionSpeed $transitionFunction;
+        }
+
+        &:hover {
+            a {
+                color: $lightBlueColor;
+            }
+        }
+    }
+
+    &__item--last {
+        font-weight: 500;
+
+        &::after {
+            display: none;
+        }
+    }
+}

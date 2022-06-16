@@ -1,3 +1,25 @@
 .title {}
 
 .subtitle {}
+
+
+.grid {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 427px;
+    grid-column-gap: 30px;
+    &__column{
+        overflow: hidden;
+    }
+}
+
+
+
+
+.title-1 {
+    font-family: $fontFamilyPhilosopher;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 102.5%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
