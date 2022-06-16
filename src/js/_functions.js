@@ -93,6 +93,25 @@ if (document.querySelector('.hero-slider')) {
         });
     });
 }
+if (document.querySelector('.popular-collections-slider')) {
+    document.querySelectorAll('.popular-collections-slider').forEach(el => {
+        const heroSlider = new Swiper(el, {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            speed: 750,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            pagination: {
+                el: el.closest('.popular-collections__inner').querySelector('.popular-collections-slider-pagination'),
+                clickable: true,
+            },
+            navigation: {
+                nextEl: el.closest('.popular-collections__inner').querySelector('.popular-collections-slider-nav_next'),
+            },
+        });
+    });
+}
 
 
 // ========================================================================================

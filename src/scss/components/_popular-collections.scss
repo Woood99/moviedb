@@ -1,0 +1,47 @@
+.popular-collections {
+    margin-bottom: 30px;
+    position: relative;
+
+    &-slider {
+        height: 545px;
+    }
+
+    &-slide {}
+}
+
+.popular-collections-slide {
+    display: flex;
+    align-items: center;
+
+    &__inner {
+        padding: 20px;
+        max-width: 205px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: math.div(45, 36);
+        text-transform: uppercase;
+    }
+
+    &__btn {
+        margin-top: 20px;
+        font-weight: 500;
+        background-color: $lightBlueColor;
+        border-radius: 57px;
+        padding: 13px 32px;
+        color: $whiteColor;
+
+        &:hover {
+            background-color: $whiteColor;
+            color: $black2Color;
+        }
+    }
+}
+
+.popular-collections-slider-pagination {
+    bottom: -30px !important;
+}
+
+.popular-collections-slider-nav_next {}

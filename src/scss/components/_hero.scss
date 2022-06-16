@@ -58,28 +58,3 @@
         line-height: math.div(23, 20);
     }
 }
-
-.hero-slider-pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 30px !important;
-
-    .swiper-pagination-bullet {
-        width: 9px;
-        height: 9px;
-        border: 1px solid $whiteColor;
-        opacity: 1;
-        background-color: transparent;
-        margin: 0 !important;
-
-        &:not(:first-child) {
-            margin-left: 5px !important;
-        }
-    }
-
-    .swiper-pagination-bullet.swiper-pagination-bullet-active {
-        opacity: 1;
-        background-color: $whiteColor;
-    }
-}

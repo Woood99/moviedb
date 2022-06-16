@@ -9,10 +9,10 @@
     <div class="site-container">
         @include('partials/header.html')
         <main class="main grid container">
-            <div class="grid__column">
+            <div class="grid__column grid__column_1">
                 @include('partials/hero.html')
             </div>
-            <div class="grid__column">
+            <div class="grid__column grid__column_2">
                 <aside class="aside">
                     <div class="aside__item related-collections">
                         <h2 class="aside__title related-collections__title">
@@ -120,6 +120,67 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="aside__item popular-collections">
+                        <h2 class="aside__title popular-collections__title">
+                            Похожие коллекции
+                        </h2>
+                        <div class="popular-collections__inner">
+                            <div class="swiper popular-collections-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide popular-collections-slide"
+                                        style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
+                                        <div class="popular-collections-slide__inner">
+                                            <h2 class="popular-collections-slide__title">
+                                                Лучшие сериалы 2015-2021 годов1
+                                            </h2>
+                                            <button type="submit" class="btn btn-reset popular-collections-slide__btn">
+                                                Смотреть
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide popular-collections-slide"
+                                        style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
+                                        <div class="popular-collections-slide__inner">
+                                            <h2 class="popular-collections-slide__title">
+                                                Лучшие сериалы 2015-2021 годов2
+                                            </h2>
+                                            <button type="submit" class="btn btn-reset popular-collections-slide__btn">
+                                                Смотреть
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide popular-collections-slide"
+                                        style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
+                                        <div class="popular-collections-slide__inner">
+                                            <h2 class="popular-collections-slide__title">
+                                                Лучшие сериалы 2015-2021 годов3
+                                            </h2>
+                                            <button type="submit" class="btn btn-reset popular-collections-slide__btn">
+                                                Смотреть
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide popular-collections-slide"
+                                        style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
+                                        <div class="popular-collections-slide__inner">
+                                            <h2 class="popular-collections-slide__title">
+                                                Лучшие сериалы 2015-2021 годов4
+                                            </h2>
+                                            <button type="submit" class="btn btn-reset popular-collections-slide__btn">
+                                                Смотреть
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular-collections-slider-pagination slider-pag-primary"></div>
+                            <div class="slider-nav-primary slider-nav-primary_next popular-collections-slider-nav_next">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </aside>
             </div>
