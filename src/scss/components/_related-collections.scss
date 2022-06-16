@@ -1,0 +1,94 @@
+.related-collections {
+
+    &__title {}
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            border-bottom: 1px solid #2B2B2B;
+        }
+
+        &:hover {
+            .related-collections-item {
+                &__descr {
+                    color: $lightBlueColor;
+                }
+
+                &__img {
+                    &::before{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.related-collections-item {
+    &__wrapper {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 92px 1fr;
+        grid-column-gap: 15px;
+    }
+
+    &__img {
+        border: 1px solid #2B2B2B;
+        border-radius: 5px;
+        overflow: hidden;
+        align-self: start;
+        position: relative;
+
+        img {
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 5px;
+        }
+
+        &::before {
+            content: "";
+            background: linear-gradient(0deg, rgba($lightBlueColor, 0.2), rgba($lightBlueColor, 0.03));
+            box-shadow: 0px 7px 16px rgb(0 0 0 / 25%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity $transitionSpeed $transitionFunction;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        stroke: #A4A4A4;
+        border-radius: 50%;
+    }
+
+    &__date {
+        margin-left: 10px;
+        color: #A4A4A4;
+        font-size: 16px;
+        line-height: math.div(19, 16);
+    }
+
+    &__descr {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: math.div(23, 20);
+        transition: color $transitionSpeed $transitionFunction;
+    }
+}
