@@ -1,0 +1,22 @@
+.nav {
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__item {
+        transition: color $transitionSpeed $transitionFunction;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        &:hover {
+            color: $lightBlueColor;
+        }
+    }
+
+    &__link {}
+}

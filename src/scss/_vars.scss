@@ -1,5 +1,5 @@
 // main
-$fontFamily: "Open Sans";
+$fontFamily: "Roboto";
 $fontSize: 18;
 $minWidth: 320;
 $maxWidth: 1920;
@@ -17,13 +17,18 @@ $mainColor: #fff; // Цвет шрифта по умолчанию
 // additional colors
 $blackColor: #000;
 $whiteColor: #fff;
-$blackSecondaryColor: #212121;
+$black2Color: #212121;
+$black3Color: #252a2c;
+$black4Color: #1b1e1e;
 $grayColor: #6d7a7c;
+$gray2Color: #dbdbdb;
 $lightBlueColor: #81BECB;
+$borderColor: #2B2B2B;
 
 // others vars
 $transitionSpeed: 0.25s;
 $transitionFunction: ease-out;
+
 
 
 

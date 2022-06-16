@@ -4,7 +4,7 @@
     border-radius: 0;
     background-color: #fff;
     padding: 0;
-    border: 1px solid green;
+    border: none;
 
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
@@ -21,3 +21,4 @@
 textarea.input-reset {
     resize: none;
 }
+

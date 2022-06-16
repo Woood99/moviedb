@@ -33,7 +33,7 @@ p {
     min-width: $minWidth + px;
     min-height: 100%;
     font-size: $fontSize + px;
-    line-height: 100%;
+    line-height: math.div(21, $fontSize);
     background-color: $bodyColor;
     color: $mainColor;
     background-image: url('../img/main-bg.png');

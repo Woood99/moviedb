@@ -1,0 +1,48 @@
+.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 64px;
+
+    &__input {
+        padding: 0 80px 0 30px;
+        height: 100%;
+        width: 100%;
+        background: $black4Color;
+        border: 2px solid $black3Color;
+        border-radius: 93px;
+        color: $lightBlueColor;
+        transition: color $transitionSpeed $transitionFunction,
+        border $transitionSpeed $transitionFunction;
+
+        &::placeholder {
+            color: $grayColor;
+        }
+
+        &:focus {
+            border: 2px solid $lightBlueColor;
+            +.search__btn {
+                svg {
+                    fill: $lightBlueColor;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+        padding: 0 18px;
+
+        svg {
+            width: 29px;
+            height: 29px;
+            display: block;
+            fill: $whiteColor;
+            transition: fill $transitionSpeed $transitionFunction;
+        }
+    }
+}
