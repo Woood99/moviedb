@@ -1,28 +1,30 @@
 // main
 $fontFamily: "Open Sans";
-$fontSize: 14;
+$fontSize: 18;
 $minWidth: 320;
 $maxWidth: 1920;
-$contentWidth: 1170;
+$contentWidth: 1770;
 $containerOffset: 15;
 $containerWidth: calc($contentWidth + ($containerOffset * 2));
 
 
 
 // main colors
-$bodyColor: #fff;
-$mainColor: #000; // Цвет шрифта по умолчанию
+$bodyColor: #171717;
+$mainColor: #fff; // Цвет шрифта по умолчанию
 
 
 // additional colors
 $blackColor: #000;
 $whiteColor: #fff;
-
-
+$blackSecondaryColor: #212121;
+$grayColor: #6d7a7c;
+$lightBlueColor: #81BECB;
 
 // others vars
-$transitionSpeed: 0.3s;
-$transitionFunction: ease-in-out;
+$transitionSpeed: 0.25s;
+$transitionFunction: ease-out;
+
 
 
 
@@ -35,6 +37,3 @@ $desktop: $containerWidth+px;
 $tablet: 1024px;
 $smallTablet: 768px;
 $mobile: 576px;
-
-
-
