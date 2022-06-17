@@ -13,7 +13,7 @@
         border-radius: 93px;
         color: $lightBlueColor;
         transition: color $transitionSpeed $transitionFunction,
-        border $transitionSpeed $transitionFunction;
+            border $transitionSpeed $transitionFunction;
 
         &::placeholder {
             color: $grayColor;
@@ -21,10 +21,29 @@
 
         &:focus {
             border: 2px solid $lightBlueColor;
+
             +.search__btn {
                 svg {
                     fill: $lightBlueColor;
                 }
+            }
+        }
+
+        @media (max-width:1400px) {
+            transition: opacity $transitionSpeed $transitionFunction,
+                overflow $transitionSpeed $transitionFunction,
+                transform $transitionSpeed $transitionFunction;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateX(100%);
+            position: absolute;
+            right: 15px;
+            width: 350px;
+
+            &.search--active {
+                opacity: 1;
+                overflow: visible;
+                transform: translateX(0);
             }
         }
     }
@@ -44,5 +63,9 @@
             fill: $whiteColor;
             transition: fill $transitionSpeed $transitionFunction;
         }
+    }
+
+    @media (max-width:1400px) {
+   
     }
 }

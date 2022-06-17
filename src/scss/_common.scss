@@ -121,3 +121,14 @@
         background-color: $whiteColor;
     }
 }
+
+
+.no-scroll{
+    height: 100vh;
+    overflow: hidden;
+}
+@media (max-width:1200px){
+    .main{
+        margin-top: calc(var(--header-height) + 30px);
+    }
+}

@@ -2,61 +2,154 @@
     <div class="container">
         <div class="header__inner">
             <a href="#" class="header__logo logo">
-                <img loading="lazy" src="img/logo.svg" class="logo__img" width="157" height="94" alt="MOVIE DB">
+                <picture>
+                    <source srcset="img/logo-mobile.svg" media="(max-width: 576px)">
+                    <source srcset="img/logo.svg">
+                    <img loading="lazy" src="img/logo.svg" class="logo__img" width="157" height="94" alt="MOVIE DB">
+                </picture>
             </a>
-            <nav class="header__nav nav">
-                <ul class="nav__list list-reset">
-                    <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Подборки</a></li>
-                    <li class="nav__item nav-dropdown nav-dropdown--arrow">
-                        <button type="submit" class="btn btn-reset nav-dropdown__title">
-                            По жанру
+            <nav class="header__nav nav" data-menu>
+                <ul class="nav__list list-reset spollers__list" data-spollers="1200,max" data-one-spoller>
+                    <li class="nav__item" data-menu-item><a href="#" class="nav__link">Главная</a></li>
+                    <li class="nav__item" data-menu-item><a href="#" class="nav__link">Подборки</a></li>
+                    <li class="nav__item nav-dropdown">
+                        <button type="submit" class="btn btn-reset nav-dropdown__title" data-spoller>
+                            <span>По жанру</span>
+                            <svg>
+                                <use xlink:href="img/sprite.svg#triangle"></use>
+                            </svg>
                         </button>
                         <div class="nav-dropdown__content">
                             <ul class="nav-dropdown__list list-reset">
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Боевик</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Военные</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Детектив</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Детский</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Драма</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Комедия</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Криминал</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Мелодрама</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Триллер</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Ужасы</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Фантастика</a>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Боевик</a>
                                 </li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Фэнтези</a></li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Военные</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Детектив</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Детский</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Драма</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Комедия</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Криминал</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Мелодрама</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Триллер</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Ужасы</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Фантастика</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Фэнтези</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Фильмы</a></li>
-                    <li class="nav__item nav-dropdown nav-dropdown--arrow">
-                        <button type="submit" class="btn btn-reset nav-dropdown__title">
-                            Сериалы
+                    <li class="nav__item" data-menu-item><a href="#" class="nav__link">Фильмы</a></li>
+                    <li class="nav__item nav-dropdown">
+                        <button type="submit" class="btn btn-reset nav-dropdown__title" data-spoller>
+                            <span>Сериалы</span>
+                            <svg>
+                                <use xlink:href="img/sprite.svg#triangle"></use>
+                            </svg>
                         </button>
                         <div class="nav-dropdown__content">
                             <ul class="nav-dropdown__list list-reset">
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Боевик</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Военные</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Детектив</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Детский</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Драма</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Комедия</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Криминал</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Мелодрама</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Триллер</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Ужасы</a></li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Фантастика</a>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Закрыть гештальт</a>
                                 </li>
-                                <li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Фэнтези</a></li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Секретное вторжение</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Миротворец</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Как я встретила вашего папу</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Пэм и Томми</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Джек Ричер</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Изобретая Анну</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">И снова здравствуйте!</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Почка</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Начальник разведки</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Обоюдное согласие</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Оффлайн</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Ресторан по понятиям</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Никто не узнает</a>
+                                </li>
+                                <li class="nav-dropdown__item" data-menu-item>
+                                    <a href="#" class="nav-dropdown__link">Серебряный волк</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Мультфильмы</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Аниме</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Актеры</a></li>
+                    <li class="nav__item" data-menu-item><a href="#" class="nav__link">Мультфильмы</a></li>
+                    <li class="nav__item" data-menu-item><a href="#" class="nav__link">Аниме</a></li>
+                    <li class="nav__item" data-menu-item><a href="#" class="nav__link">Актеры</a></li>
                 </ul>
+                <div class="header__social">
+                    <ul class="social list-reset">
+                        <li class="social__item">
+                            <a href="#" target="_blank" class="social__link social__link--fb"
+                                aria-label="Наша страничка в Фейсбуке">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" target="_blank" class="social__link social__link--tw"
+                                aria-label="Наша страничка в Инстаграме">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" target="_blank" class="social__link social__link--vk"
+                                aria-label="Наша страничка во Вконтакте">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
             <form action="#" class="header__search search">
                 <input type="text" name="search" class="input-reset search__input" placeholder="Поиск по сайту">
@@ -66,6 +159,9 @@
                     </svg>
                 </button>
             </form>
+            <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+                <span class="burger__line"></span>
+            </button>
         </div>
     </div>
 </header>

@@ -1,0 +1,36 @@
+.social {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        &:not(:first-child) {
+            margin-left: 15px;
+        }
+        &:hover{
+            svg{
+                stroke: $lightBlueColor;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        svg {
+            width: 37px;
+            height: 37px;
+            stroke: #A4A4A4;
+            display: block;
+            fill: none;
+            transition: stroke $transitionSpeed $transitionFunction;
+        }
+    }
+
+    &__link--fb {}
+
+    &__link--tw {}
+
+    &__link--vk {}
+}

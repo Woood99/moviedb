@@ -7,16 +7,87 @@
         height: 141px;
         display: flex;
         align-items: center;
+
+        @media (max-width:1200px) {
+            height: 110px;
+        }
+
+        @media (max-width:$mobile) {
+            height: 56px;
+        }
     }
 
-    &__logo {}
+    &__logo {
+        @media (max-width:1200px) {
+            position: relative;
+            z-index: 5;
+        }
+    }
 
     &__nav {
         margin-left: 29px;
+
+        @media (max-width:1200px) {
+            margin-left: 0;
+        }
     }
 
     &__search {
         margin-left: 27px;
         flex: 1 1 auto;
+
+        @media (max-width:1200px) {
+            position: relative;
+            z-index: 5;
+        }
+    }
+
+    @media (max-width:1200px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+
+        .header__social {
+            position: relative;
+
+            &::before {
+                content: '';
+                width: calc(100% - 30px);
+                height: 2px;
+                right: 15px;
+                position: absolute;
+                top: 0;
+                background-color: #4A4A4A;
+                transition: transform 0.3s $transitionFunction 0.4s;
+                transform-origin: center;
+                transform: scale(0);
+            }
+        }
+
+        &.burger--active {
+            background: #818182;
+            border-bottom: none;
+
+            .header__social {
+                &::before {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    .burger {
+        @media (max-width:1200px) {
+            position: relative;
+            z-index: 5;
+        }
+    }
+
+    &__social {
+        @media (min-width:1201px) {
+            display: none;
+        }
     }
 }
