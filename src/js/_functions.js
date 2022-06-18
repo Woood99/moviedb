@@ -117,6 +117,48 @@ if (document.querySelector('.popular-collections-slider')) {
     });
 }
 
+if (document.querySelector('.slider-line-swiper')) {
+    document.querySelectorAll('.slider-line-swiper').forEach(el => {
+        const sliderLine = new Swiper(el, {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            speed: 750,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            navigation: {
+                prevEl: el.closest('.slider-line__inner').querySelector('.slider-line-swiper-nav_prev'),
+                nextEl: el.closest('.slider-line__inner').querySelector('.slider-line-swiper-nav_next'),
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2.01,
+                    spaceBetween: 10,
+                },
+                576: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+                1200: {
+                    slidesPerView: 3,
+                },
+                1400: {
+                    slidesPerView: 4,
+                },
+                1800: {
+                    slidesPerView: 5,
+                },
+            }
+        });
+    });
+}
+
 
 // ========================================================================================
 
