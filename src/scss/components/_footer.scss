@@ -14,12 +14,14 @@
 
         @media (max-width:$tablet) {
             grid-template-columns: max-content 1fr;
+            grid-template-rows: max-content 1fr;
             grid-column-gap: 50px;
             grid-row-gap: 50px;
         }
 
         @media (max-width:$smallTablet) {
             grid-template-columns: 1fr;
+            grid-template-rows: auto;
             grid-gap: 0;
         }
     }
@@ -35,13 +37,24 @@
             padding: 15px 0 20px;
         }
     }
+    @media (max-width:$smallTablet){
+         margin-top: 80px; 
+    }
+    @media (max-width:$mobile){
+         margin-top: 60px; 
+    }
 }
 
 .footer-top {
     &__column--logo {
-        text-align: center;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #323232;
+        @media (max-width:$tablet){
+            align-self: start;
+        }
+        @media (max-width:$smallTablet) {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #323232;
+        }
     }
 
     &__logo {
@@ -133,6 +146,7 @@
         @media (max-width:$tablet) {
             order: 2;
             padding: 0;
+            grid-row: 2 span;
         }
 
         @media (max-width:$smallTablet) {
@@ -163,20 +177,23 @@
             padding-right: 0;
             order: 3;
         }
-        @media (max-width:$smallTablet){
-            font-size: 14px; 
-       }
+
+        @media (max-width:$smallTablet) {
+            font-size: 14px;
+        }
     }
 
     &__social {
         .social {
             padding: 0;
-            svg{
+
+            svg {
                 width: 59px;
                 height: 59px;
-                @media (max-width:$smallTablet){
-                     width: 37px;
-                     height: 37px; 
+
+                @media (max-width:$smallTablet) {
+                    width: 37px;
+                    height: 37px;
                 }
             }
         }
@@ -202,8 +219,9 @@
             order: 2;
             margin-bottom: 15px;
         }
-        @media (max-width:$smallTablet){
-             font-size: 14px; 
+
+        @media (max-width:$smallTablet) {
+            font-size: 14px;
         }
     }
 }
