@@ -4,12 +4,20 @@
 
     &-slider {
         height: 545px;
+        @media (max-width:$smallTablet){
+            height: 370px;
+        }
     }
 
     &-slide {}
+    @media (max-width:$mobile){
+         margin-bottom: 17px; 
+    }
 }
 
 .popular-collections-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
 
@@ -23,6 +31,12 @@
         font-size: 36px;
         line-height: math.div(45, 36);
         text-transform: uppercase;
+        @media (max-width:$tablet){
+            font-size: 30px;
+        }
+        @media (max-width:$mobile){
+             font-size: 26px; 
+        }
     }
 
     &__btn {
@@ -37,11 +51,21 @@
             background-color: $whiteColor;
             color: $black2Color;
         }
+        @media (max-width:$mobile){
+            margin-top: 10px;
+             font-size: 14px;
+             line-height: math.div(16 ,14 );
+              padding: 10px 26px;
+        }
+    }
+    @media (max-width:$smallTablet){
+        background-position: center;
     }
 }
 
 .popular-collections-slider-pagination {
     bottom: -30px !important;
+    @media (max-width:$mobile){
+         bottom: -17px !important; 
+    }
 }
-
-.popular-collections-slider-nav_next {}

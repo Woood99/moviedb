@@ -32,6 +32,11 @@
         display: grid;
         grid-template-columns: 92px 1fr;
         grid-column-gap: 15px;
+        @media (max-width:$mobile){
+            grid-template-columns: 63px 1fr;
+            grid-column-gap: 10px;
+            padding: 15px 10px;
+        }
     }
 
     &__img {
@@ -81,6 +86,10 @@
         color: #A4A4A4;
         font-size: 16px;
         line-height: math.div(19, 16);
+        @media (max-width:$mobile){
+             font-size: 14px; 
+             line-height: math.div(16 , 14);
+        }
     }
 
     &__descr {
@@ -88,5 +97,9 @@
         font-size: 20px;
         line-height: math.div(23, 20);
         transition: color $transitionSpeed $transitionFunction;
+        @media (max-width:$mobile){
+            margin-top: 8px; 
+            font-size: 16px; 
+        }
     }
 }

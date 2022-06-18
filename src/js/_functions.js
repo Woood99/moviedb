@@ -113,6 +113,23 @@ if (document.querySelector('.popular-collections-slider')) {
             navigation: {
                 nextEl: el.closest('.popular-collections__inner').querySelector('.popular-collections-slider-nav_next'),
             },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1201: {
+                    slidesPerView: 1,
+                },
+            }
         });
     });
 }
