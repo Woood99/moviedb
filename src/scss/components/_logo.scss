@@ -3,16 +3,31 @@
         max-width: none;
     }
 
-    @media (max-width:1200px) {
-        width: 120px;
-
-        &__img {
-            max-width: 100%;
-            display: block;
+    &.header__logo{
+        @media (max-width:1200px) {
+            width: 120px;
+    
+            .logo__img {
+                max-width: 100%;
+                display: block;
+            }
+        }
+    
+        @media (max-width:$mobile) {
+            width: 68px;
         }
     }
-
-    @media (max-width:$mobile) {
-        width: 68px;
+    &.footer-top__logo{
+        @media (max-width:1200px) {
+            width: 200px;
+    
+            .logo__img {
+                max-width: 100%;
+                display: block;
+            }
+        }
+        @media (max-width:$mobile){
+             width: 142px; 
+        }
     }
 }
