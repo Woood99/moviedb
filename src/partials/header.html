@@ -151,14 +151,21 @@
                     </ul>
                 </div>
             </nav>
-            <form action="#" class="header__search search">
-                <input type="text" name="search" class="input-reset search__input" placeholder="Поиск по сайту">
-                <button class="btn btn-reset search__btn">
-                    <svg>
-                        <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                </button>
-            </form>
+            <button class="btn btn-reset search--mobile">
+                <svg>
+                    <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+            </button>
+            <div class="header__search search">
+                <form action="#" class="search__wrapper">
+                    <input type="text" name="search" class="input-reset search__input" placeholder="Поиск по сайту">
+                    <button class="btn btn-reset search__btn">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
             <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
                 <span class="burger__line"></span>
             </button>
