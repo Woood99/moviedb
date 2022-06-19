@@ -1,0 +1,7 @@
+.new-films {
+    margin-top: 60px;
+
+    @media (max-width:$smallTablet) {
+        margin-top: 30px;
+    }
+}

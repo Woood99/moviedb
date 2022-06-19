@@ -2,6 +2,9 @@
     &__inner {
         margin-top: 40px;
         position: relative;
+        @media (max-width:$mobile){
+            margin-top: 20px;  
+        }
     }
 }
 
@@ -10,8 +13,6 @@
         margin-right: -15px;
         padding-right: 15px;
     }
-
-    @media (max-width:$mobile) {}
 }
 
 .slider-line-slide {
