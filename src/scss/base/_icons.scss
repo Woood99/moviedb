@@ -9,13 +9,22 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-[class*="_icon-"] {
+[class*="icon-"] {
     &:before {
         @extend %ic;
         display: block;
     }
 }
 
-
-
 // ====================================================================================
+
+
+.icon-star:before {
+    content: "\e900";
+    color: #d8d8d8;
+}
+
+.icon-star-fill:before {
+    content: "\e901";
+    color: #ffd644;
+}

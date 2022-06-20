@@ -36,7 +36,8 @@
             display: block;
             position: relative;
             z-index: 2;
-            @media (max-width:$tablet){
+
+            @media (max-width:$tablet) {
                 display: flex;
                 align-items: center;
             }
@@ -69,9 +70,108 @@
         margin-top: 40px;
         font-size: 20px;
         line-height: math.div(23, 20);
-        @media (max-width:$mobile){
-             margin-top: 20px;
-             font-size: 14px; 
+
+        @media (max-width:$mobile) {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }
+
+    &__grade {
+        position: absolute;
+        z-index: 999;
+        bottom: 10px;
+        right: 10px;
+
+        width: 230px;
+        height: 90px;
+        padding: 5px 10px 10px;
+        box-sizing: border-box;
+
+        background: rgba(28, 29, 31, 0.5);
+        border: 1px solid #2B2B2B;
+        box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(20px);
+        border-radius: 5px;
+
+
+        // display: grid;
+        // grid-template-columns: 1fr;
+        // grid-template-rows: max-content max-content;
+        @media (max-width:$mobile) {
+            padding: 3px 12px 3px 4px;
+            width: 100px;
+            height: 44px;
+            bottom: 5px;
+            right: 5px;
+
+        }
+    }
+}
+
+
+.hero-grade {
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: math.div(56, 48);
+        color: #E3AC3C;
+
+        @media (max-width:$mobile) {
+            font-size: 18px;
+            line-height: math.div(21, 18);
+        }
+    }
+
+    &__right {
+        margin-left: 15px;
+
+        >span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            display: block;
+        }
+
+        @media (max-width:$mobile) {
+            margin-left: 8px;
+
+            >span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__rating {
+        margin-top: 5px;
+
+        @media (max-width:$mobile) {
+            margin-top: 1px;
+        }
+    }
+
+    &__footer {
+        font-size: 16px;
+        line-height: math.div(19, 16);
+
+        span:nth-child(2) {
+            color: #E3AC3C;
+        }
+
+        @media (max-width:$mobile) {
+            margin-top: 3px;
+            margin-left: 35px;
+            font-size: 10px;
+            line-height: math.div(12, 10);
+
+            span:nth-child(1) {
+                display: none;
+            }
         }
     }
 }

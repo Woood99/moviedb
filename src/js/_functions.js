@@ -272,8 +272,8 @@ spollersFunc.spollers();
 
 
 // Модуль звездного рейтинга 
-// import * as ratingFunc from "./functions/rating";
-// ratingFunc.formRating();
+import * as ratingFunc from "./functions/rating";
+ratingFunc.formRating();
 
 
 
