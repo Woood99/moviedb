@@ -8,7 +8,7 @@
 
 
 // стили для модального окна
-// @import "../../node_modules/graph-modal/dist/graph-modal.min"
+@import "../../node_modules/graph-modal/dist/graph-modal.min";
 
 
 // ================================================================================
@@ -60,6 +60,12 @@
 // ================================================================================
 
 
+// стили для videojs
+@import "../../node_modules/video.js/dist/video-js.min";
+@import "../../node_modules/@videojs/themes/dist/fantasy/index";
+
+
+// ================================================================================
 
 
 

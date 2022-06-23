@@ -301,3 +301,18 @@ import './functions/fix-fullheight';
 
 
 // ========================================================================================
+
+
+
+// video-js
+import videojs from 'video.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    function movieCardTrailers() {
+        let movieCardTrailers = document.querySelectorAll('.movie-card-trailer-video').forEach(el => {
+            videojs(el);
+        });
+    };
+    movieCardTrailers();
+});
+
