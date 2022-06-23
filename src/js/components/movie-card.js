@@ -39,10 +39,18 @@ function movieCardTrailerModal() {
         movieCardTrailerModal.setAttribute('aria-modal', 'true');
         movieCardTrailerModal.setAttribute('data-graph-target', `${attr}`);
         let video = el.closest('.movie-card-trailer__view').querySelector('.movie-card-trailer-video');
+        let title = el.closest('.movie-card__inner').querySelector('.movie-card__title').textContent.trim();
         movieCardTrailerModal.innerHTML = `
-            <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
             <div class="graph-modal__content">
-                <div class="movie-card-trailer__header">назад</div>
+                <div class="movie-card-trailer__header">
+                    <button class="btn-reset js-modal-close graph-modal__close movie-card-trailer__prev" aria-label="Закрыть модальное окно">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <span>Трейлер:</span>
+                    <p>${title}</p>
+                </div>
                 <video poster="${video.getAttribute('poster')}" controls class="video-js movie-card-trailer-video vjs-theme-fantasy">
                     <source src="${video.querySelector('source').getAttribute('src')}" type="video/mp4">
                 </video>
@@ -55,7 +63,7 @@ function movieCardTrailerModal() {
 movieCardTrailerModal();
 
 
-function trailerModal() {
+function trailerModalInterval() {
     document.querySelectorAll('.modal-trailers__container').forEach(el => {
         let content = el.querySelector('.graph-modal__content');
         let count = 0;
@@ -71,11 +79,76 @@ function trailerModal() {
         }
         interval();
         el.addEventListener('mousemove', function () {
-            clearInterval(counter);
-            count = 0;
-            content.classList.add('trailers-move');
-            interval();
+            if (el.querySelector('.movie-card-trailer-video').classList.contains('vjs-has-started')) {
+                clearInterval(counter);
+                count = 0;
+                content.classList.add('trailers-move');
+                interval();
+            }
+        });
+        el.addEventListener('touchstart', function () {
+            if (el.querySelector('.movie-card-trailer-video').classList.contains('vjs-has-started')) {
+                clearInterval(counter);
+                count = 0;
+                content.classList.add('trailers-move');
+                interval();
+            }
         });
     })
 }
-// trailerModal();
+trailerModalInterval();
+
+
+
+
+function trailerModalStop() {
+    document.querySelectorAll('.modal-trailers__container').forEach(el => {
+        let video = el.querySelector('.movie-card-trailer-video');
+        let close = el.querySelector('.js-modal-close');
+        close.addEventListener('click', () => {
+            video.pause();
+        });
+    });
+}
+trailerModalStop();
+
+
+
+import {
+    isMobile,
+    isTablet,
+    isDesktop
+} from '../functions/check-viewport';
+
+function movieCardActors() {
+    document.querySelectorAll('.movie-card-actors__more').forEach(el => {
+        let list = el.closest('.movie-card__actors').querySelector('.movie-card-actors__cast');
+        let items = list.querySelectorAll('.movie-card-actors-item');
+        let max = list.getAttribute('data-actors-max');
+        let min = list.getAttribute('data-actors-min');
+        if (items.length > max && !isMobile()) {
+            for (let item = 0; item < items.length; item++) {
+                if (item >= max) {
+                    let element = items[item];
+                    element.style.display = 'none';
+                }
+            }
+        }
+        if (items.length > min && isMobile()) {
+            for (let item = 0; item < items.length; item++) {
+                if (item >= min) {
+                    let element = items[item];
+                    element.style.display = 'none';
+                }
+            }
+        }
+        el.addEventListener('click', () => {
+            items.forEach(element => {
+                if (element.getAttribute('style') == 'display: none;') {
+                    element.style.display = 'block';
+                }
+            });
+        });
+    });
+}
+movieCardActors();

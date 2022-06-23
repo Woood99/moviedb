@@ -170,12 +170,26 @@
 
     &__trailer {
         margin-top: 20px;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image.png);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
         box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(20px);
         border-radius: 5px;
 
         width: 100%;
+    }
+
+    &__actors {
+        margin-top: 20px;
+        background: rgba(28, 29, 31, 0.5);
+        border: 1px solid #2B2B2B;
+        box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(20px);
+        border-radius: 5px;
+        padding: 15px 20px 30px;
+        @media (max-width:$mobile){
+             margin-top: 10px;
+             padding: 15px 10px; 
+        }
     }
 }
 
@@ -511,7 +525,7 @@
 .movie-card-trailer {
     &__header {
         width: 100%;
-        background-color: green;
+        background: #818182;
         height: 50px;
         position: absolute;
         top: 0;
@@ -519,10 +533,56 @@
         z-index: 99;
         opacity: 0;
         visibility: hidden;
-        transition: opacity $transitionSpeed $transitionFunction, visibility $transitionSpeed $transitionFunction;
+        transform: translateY(-100%);
+        transition: opacity 0.35s $transitionFunction,
+            visibility 0.35s $transitionFunction,
+            transform 0.35s $transitionFunction;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+        span {
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            margin-left: 40px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            margin-left: 10px;
+        }
+
+        @media (max-width:$mobile) {
+            padding: 0 15px;
+
+            span {
+                margin-left: 20px;
+                font-size: 14px;
+                line-height: math.div(16, 14);
+            }
+
+            p {
+                font-size: 14px;
+                line-height: math.div(16, 14);
+                margin-left: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
     }
 
-    &__view {}
+    &__prev {
+        svg {
+            width: 100%;
+            height: 100%;
+            stroke: $whiteColor;
+            fill: none;
+            transform: rotate(180deg);
+            display: block;
+        }
+    }
 
     &__btn {
         width: 100%;
@@ -564,6 +624,18 @@
             line-height: math.div(16, 14);
             color: $whiteColor;
         }
+
+        @media (max-width:$mobile) {
+            img {
+                width: 44px;
+                height: 33px;
+            }
+
+            span {
+                font-size: 12px;
+                line-height: math.div(14, 12);
+            }
+        }
     }
 }
 
@@ -578,15 +650,41 @@
     }
 }
 
+.graph-modal {
+    &::before {
+        display: none;
+    }
+}
+
 .modal-trailers {
     &__container {
         padding: 0;
         margin: 0;
-        width: 95%;
-    }
+        width: 100%;
+        height: 100%;
 
-    .graph-modal__content {
-        position: relative;
+        .graph-modal__close {
+            z-index: 999;
+            width: 25px;
+            height: 25px;
+            position: sticky;
+        }
+
+        .graph-modal__content {
+            position: relative;
+        }
+
+        .vjs-theme-fantasy .vjs-big-play-button {
+            color: $whiteColor;
+        }
+
+        .vjs-theme-fantasy .vjs-play-progress {
+            background-color: $whiteColor;
+        }
+
+        .vjs-play-progress:before {
+            background-color: #818182;
+        }
     }
 }
 
@@ -594,5 +692,149 @@
     .movie-card-trailer__header {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.movie-card-actors {
+
+    &__row {
+        &:not(:first-child) {
+            margin-top: 30px;
+
+            @media (max-width:$mobile) {
+                margin-top: 20px;
+            }
+        }
+
+        &:last-child {
+            margin-top: 20px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        color: #A4A4A4;
+        margin-bottom: 20px;
+
+        @media (max-width:$mobile) {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: math.div(16, 14);
+        }
+    }
+
+    &__producer {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {}
+
+    &__producer-list {
+        margin-left: 25px;
+
+        @media (max-width:$mobile) {
+            margin-left: 10px;
+        }
+    }
+
+    &__producer-item {
+        &:not(:first-child) {
+            margin-top: 10px;
+
+            @media (max-width:$mobile) {
+                margin-top: 5px;
+            }
+        }
+
+        span {
+            @media (max-width:$mobile) {
+                font-size: 14px;
+                line-height: math.div(16, 14);
+            }
+        }
+        span:nth-child(1) {
+            color: $lightBlueColor;
+            font-weight: 700;
+        }
+
+        span:nth-child(2) {
+            color: $whiteColor;
+        }
+
+        span:nth-child(3) {
+            color: #A4A4A4;
+        }
+    }
+
+    &__cast {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        @media (max-width:$mobile) {
+            flex-wrap: nowrap;
+            gap: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 5px;
+        }
+    }
+
+    &__more {
+        color: $lightBlueColor;
+        text-decoration-line: underline;
+        transition: color $transitionSpeed $transitionFunction;
+
+        &:hover {
+            color: $whiteColor;
+        }
+
+        @media (max-width:$mobile) {
+            font-size: 14px;
+            line-height: math.div(16, 14);
+        }
+    }
+}
+
+.movie-card-actors-item {
+    &__inner {
+        display: grid;
+        grid-template-columns: 41px max-content;
+        grid-template-rows: 51px;
+        align-items: center;
+        border: 1px solid #2B2B2B;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        span {
+            display: block;
+            padding: 0 10px;
+            transition: color $transitionSpeed $transitionFunction;
+
+            @media (max-width:$mobile) {
+                font-size: 14px;
+                line-height: math.div(16, 14);
+            }
+        }
+
+        &:hover {
+            span {
+                color: $lightBlueColor;
+            }
+        }
+
+        @media (max-width:$mobile) {
+            grid-template-columns: 30px max-content;
+            grid-template-rows: 39px;
+        }
     }
 }
