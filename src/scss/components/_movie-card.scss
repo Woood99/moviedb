@@ -186,9 +186,10 @@
         backdrop-filter: blur(20px);
         border-radius: 5px;
         padding: 15px 20px 30px;
-        @media (max-width:$mobile){
-             margin-top: 10px;
-             padding: 15px 10px; 
+
+        @media (max-width:$mobile) {
+            margin-top: 10px;
+            padding: 15px 10px;
         }
     }
 }
@@ -588,7 +589,7 @@
         width: 100%;
         height: 100%;
         position: relative;
-
+display: block;
         &::before {
             content: '';
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -635,6 +636,21 @@
                 font-size: 12px;
                 line-height: math.div(14, 12);
             }
+        }
+    }
+
+    &__time {
+        font-size: 16px;
+        line-height: math.div(19, 16);
+        color: #A4A4A4;
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 100;
+        @media (max-width:$mobile){
+             font-size: 12px;
+             line-height: math.div(14 ,12 ); 
         }
     }
 }
@@ -685,6 +701,10 @@
         .vjs-play-progress:before {
             background-color: #818182;
         }
+
+        .vjs-theme-fantasy .vjs-remaining-time {
+            display: block;
+        }
     }
 }
 
@@ -730,6 +750,11 @@
     &__producer {
         display: flex;
         align-items: center;
+
+        @media (max-width:$mobile) {
+            flex-direction: column;
+            align-items: stretch;
+        }
     }
 
     &__item {}
@@ -738,7 +763,8 @@
         margin-left: 25px;
 
         @media (max-width:$mobile) {
-            margin-left: 10px;
+            margin-left: 0;
+            margin-top: 10px;
         }
     }
 
@@ -757,6 +783,7 @@
                 line-height: math.div(16, 14);
             }
         }
+
         span:nth-child(1) {
             color: $lightBlueColor;
             font-weight: 700;
@@ -779,9 +806,7 @@
         @media (max-width:$mobile) {
             flex-wrap: nowrap;
             gap: 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 5px;
+            flex-direction: column;
         }
     }
 
@@ -823,6 +848,11 @@
             @media (max-width:$mobile) {
                 font-size: 14px;
                 line-height: math.div(16, 14);
+
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
 
@@ -833,8 +863,14 @@
         }
 
         @media (max-width:$mobile) {
-            grid-template-columns: 30px max-content;
+            grid-template-columns: 30px 1fr;
             grid-template-rows: 39px;
+        }
+    }
+
+    @media (max-width:$mobile) {
+        &:not(:first-child) {
+            margin-top: 5px;
         }
     }
 }

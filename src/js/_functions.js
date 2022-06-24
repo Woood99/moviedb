@@ -308,11 +308,47 @@ import './functions/fix-fullheight';
 import videojs from 'video.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+
     function movieCardTrailers() {
         let movieCardTrailers = document.querySelectorAll('.movie-card-trailer-video').forEach(el => {
             videojs(el);
+            let movieCardTrailerBtns = document.querySelectorAll('.movie-card-trailer__btn');
+            let modalTrailersContainers = document.querySelectorAll('.modal-trailers__container');
+            for (let container of modalTrailersContainers) {
+                let containerAttr = container.getAttribute('data-graph-target');
+                for (let btn of movieCardTrailerBtns) {
+                    let btnAttr = btn.getAttribute('data-graph-path');
+                    if (containerAttr == btnAttr) {
+                        setTimeout(() => {
+                            function msToTime(duration) {
+                                duration = duration * 1000;
+                                let milliseconds = Math.floor((duration % 1000) / 100),
+                                    seconds = Math.floor((duration / 1000) % 60),
+                                    minutes = Math.floor((duration / (1000 * 60)) % 60),
+                                    hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+                                hours = (hours < 10) ? hours : hours;
+                                minutes = (minutes < 10) ? minutes : minutes;
+                                seconds = (seconds < 10) ? seconds : seconds;
+                                if (hours == 0) {
+                                    return minutes + ":" + seconds;
+                                } else if (hours > 0) {
+                                    return hours + ":" + minutes + ":" + seconds;
+                                }
+                            }
+                            btn.querySelector('.movie-card-trailer__time').textContent = msToTime(el.duration);
+                        }, 500);
+                    }
+                }
+            }
+
+
+
+
+
         });
     };
     movieCardTrailers();
-});
 
+
+
+});
