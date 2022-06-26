@@ -1,0 +1,70 @@
+.movie-list {
+
+    &__list {
+        margin-top: 40px;
+
+        @media (max-width:$smallTablet) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.movie-list-item {
+
+    &__inner {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(auto, 381px) max-content;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            border: 1px solid #2B2B2B;
+            filter: drop-shadow(0px 7px 16px rgba(0, 0, 0, 0.14));
+            border-radius: 5px;
+        }
+
+        @media (max-width:$smallTablet) {
+            grid-template-rows: minmax(auto, 300px) max-content;
+        }
+
+        @media (max-width:$mobile) {
+            grid-template-rows: minmax(auto, 215px) max-content;
+        }
+    }
+
+    &__content {
+        margin-top: 20px;
+
+        @media (max-width:$smallTablet) {
+            margin-top: 10px;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: math.div(26, 22);
+        transition: color $transitionSpeed $transitionFunction;
+        @media (max-width:$smallTablet) {
+            font-size: 16px;
+            line-height: math.div(19, 16);
+        }
+    }
+
+    &__descr {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: math.div(23, 20);
+        transition: color $transitionSpeed $transitionFunction;
+        @media (max-width:$smallTablet) {
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: math.div(16, 14);
+        }
+    }
+}

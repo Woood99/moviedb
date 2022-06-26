@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
                                 hours = (hours < 10) ? hours : hours;
                                 minutes = (minutes < 10) ? minutes : minutes;
-                                seconds = (seconds < 10) ? seconds : seconds;
+                                seconds = (seconds < 10) ? `0${seconds}` : seconds;
                                 if (hours == 0) {
                                     return minutes + ":" + seconds;
                                 } else if (hours > 0) {
@@ -348,7 +348,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     movieCardTrailers();
-
-
-
+    
+    // ========================================================================================================
+   
+    function movieCardView() {
+        let movieCardView = document.querySelectorAll('.movie-card-view-video').forEach(el => {
+            videojs(el);
+        });
+    };
+    movieCardView();
+    
 });

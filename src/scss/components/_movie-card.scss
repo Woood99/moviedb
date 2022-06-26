@@ -41,8 +41,13 @@
     }
 
     &__view {
+        height: 666px;
+        @media (max-width:1400px) {
+            height: 500px;
+        }
         @media (max-width:1200px) {
             align-self: center;
+            height: 300px;
         }
 
         @media (max-width:$mobile) {
@@ -195,9 +200,83 @@
 }
 
 .movie-card-view {
+    &__header {
+        width: 100%;
+        background: #818182;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: opacity 0.35s $transitionFunction,
+            visibility 0.35s $transitionFunction,
+            transform 0.35s $transitionFunction;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+        span {
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            margin-left: 40px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            margin-left: 10px;
+        }
+
+        @media (max-width:$mobile) {
+            padding: 0 15px;
+
+            span {
+                margin-left: 20px;
+                font-size: 14px;
+                line-height: math.div(16, 14);
+            }
+
+            p {
+                font-size: 14px;
+                line-height: math.div(16, 14);
+                margin-left: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    &__prev {
+        svg {
+            width: 100%;
+            height: 100%;
+            stroke: $whiteColor;
+            fill: none;
+            transform: rotate(180deg);
+            display: block;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 5px;
+    }
 
     &__inner {
         width: 100%;
+        height: 100%;
         position: relative;
         border: 1px solid #2B2B2B;
         filter: drop-shadow(0px 7px 16px rgba(0, 0, 0, 0.14));
@@ -212,11 +291,10 @@
             height: 100%;
             opacity: 0;
             transition: opacity $transitionSpeed $transitionFunction;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 
             @media (max-width:1200px) {
                 opacity: 1;
-                background: linear-gradient(0deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14));
             }
         }
 
@@ -257,17 +335,69 @@
         flex-direction: column;
         transition: opacity $transitionSpeed $transitionFunction, visibility $transitionSpeed $transitionFunction;
 
+        img {
+            display: block;
+        }
+
         span {
+            display: block;
             margin-top: 14px;
             font-size: 20px;
             line-height: math.div(23, 20);
+            color: $whiteColor;
         }
 
         @media (max-width:1200px) {
-            display: none;
+            opacity: 1;
+            visibility: visible;
+
+            img {
+                width: 65px;
+            }
+
+            span {
+                margin-top: 9px;
+                font-size: 14px;
+                line-height: math.div(16, 14);
+            }
         }
     }
 }
+
+.movie-card-view.movie-card-page {
+    .movie-card-view__inner {
+        &::before {
+            display: none;
+        }
+    }
+
+    .movie-card-view__btn {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity $transitionSpeed $transitionFunction;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+
+            @media (max-width:1200px) {
+                opacity: 1;
+            }
+        }
+    }
+
+    &:hover {
+        .movie-card-view__btn {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 
 .movie-card-rating {
 
@@ -522,6 +652,12 @@
 
 
 
+// ====================================================================================
+
+
+
+
+
 
 .movie-card-trailer {
     &__header {
@@ -589,7 +725,8 @@
         width: 100%;
         height: 100%;
         position: relative;
-display: block;
+        display: block;
+
         &::before {
             content: '';
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -648,12 +785,26 @@ display: block;
         bottom: 10px;
         right: 10px;
         z-index: 100;
-        @media (max-width:$mobile){
-             font-size: 12px;
-             line-height: math.div(14 ,12 ); 
+
+        @media (max-width:$mobile) {
+            font-size: 12px;
+            line-height: math.div(14, 12);
         }
     }
 }
+
+
+
+
+
+
+
+
+// ====================================================================================
+
+
+
+
 
 .movie-card-trailer-video {
     width: 100%;
@@ -665,6 +816,27 @@ display: block;
         }
     }
 }
+
+.movie-card-view-video {
+    width: 100%;
+    height: var(--vh);
+
+    [class*="icon-"] {
+        &:before {
+            font-family: 'VideoJS';
+        }
+    }
+}
+
+
+
+
+
+
+// ====================================================================================
+
+
+
 
 .graph-modal {
     &::before {
@@ -708,6 +880,54 @@ display: block;
     }
 }
 
+.modal-view {
+    &__container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+
+        .graph-modal__close {
+            z-index: 999;
+            width: 25px;
+            height: 25px;
+            position: sticky;
+        }
+
+        .graph-modal__content {
+            position: relative;
+        }
+
+        .vjs-theme-fantasy .vjs-big-play-button {
+            color: $whiteColor;
+        }
+
+        .vjs-theme-fantasy .vjs-play-progress {
+            background-color: $whiteColor;
+        }
+
+        .vjs-play-progress:before {
+            background-color: #818182;
+        }
+
+        .vjs-theme-fantasy .vjs-remaining-time {
+            display: block;
+        }
+    }
+}
+
+
+
+
+
+
+// ====================================================================================
+
+
+
+
+
+
 .trailers-move {
     .movie-card-trailer__header {
         opacity: 1;
@@ -716,8 +936,20 @@ display: block;
     }
 }
 
+.view-move {
+    .movie-card-view__header {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
 
 
+
+
+
+
+// ====================================================================================
 
 .movie-card-actors {
 
