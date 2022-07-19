@@ -1,12 +1,12 @@
 .nav {
+    position: relative;
+    z-index: 5;
     &__list {
         display: flex;
         align-items: center;
-
         @media (max-width: 1200px) {
             flex-direction: column;
             text-align: center;
-
         }
     }
 
@@ -34,6 +34,7 @@
     &__link {
         padding: 15px 0;
         transition: color $transitionSpeed $transitionFunction;
+        @include adaptiveValue("font-size", 18, 14);
 
         @media (max-width: 1200px) {
             width: 100%;
@@ -95,6 +96,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include adaptiveValue("font-size", 18, 14);
 
         svg {
             fill: $lightBlueColor;

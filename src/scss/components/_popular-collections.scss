@@ -8,8 +8,6 @@
             height: 370px;
         }
     }
-
-    &-slide {}
     @media (max-width:$mobile){
          margin-bottom: 17px; 
     }
@@ -28,15 +26,9 @@
 
     &__title {
         font-weight: 500;
-        font-size: 36px;
+        @include adaptiveValue("font-size", 36, 26);
         line-height: math.div(45, 36);
         text-transform: uppercase;
-        @media (max-width:$tablet){
-            font-size: 30px;
-        }
-        @media (max-width:$mobile){
-             font-size: 26px; 
-        }
     }
 
     &__btn {
@@ -46,15 +38,14 @@
         border-radius: 57px;
         padding: 13px 32px;
         color: $whiteColor;
-
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(21 ,18 );
         &:hover {
             background-color: $whiteColor;
             color: $black2Color;
         }
         @media (max-width:$mobile){
             margin-top: 10px;
-             font-size: 14px;
-             line-height: math.div(16 ,14 );
               padding: 10px 26px;
         }
     }

@@ -11,7 +11,7 @@
     &__item {
         color: #DBDBDB;
         position: relative;
-
+        @include adaptiveValue("font-size", 18, 10);
         &::after {
             content: '/';
             position: absolute;
@@ -38,10 +38,6 @@
                 color: $lightBlueColor;
             }
         }
-
-        @media (max-width:$mobile) {
-            font-size: 10px;
-        }
     }
 
     &__item--last {
@@ -51,8 +47,7 @@
             display: none;
         }
     }
-
-    @media (max-width:$mobile) {
-        padding: 15px 20px 15px 10px;
+    @media (max-width:$tablet){
+        padding: 15px 20px 15px 10px;  
     }
 }

@@ -84,22 +84,17 @@
     &__date {
         margin-left: 10px;
         color: #A4A4A4;
-        font-size: 16px;
+        @include adaptiveValue("font-size", 16, 14);
         line-height: math.div(19, 16);
-        @media (max-width:$mobile){
-             font-size: 14px; 
-             line-height: math.div(16 , 14);
-        }
     }
 
     &__descr {
         margin-top: 10px;
-        font-size: 20px;
+        @include adaptiveValue("font-size", 20, 16);
         line-height: math.div(23, 20);
         transition: color $transitionSpeed $transitionFunction;
         @media (max-width:$mobile){
             margin-top: 8px; 
-            font-size: 16px; 
         }
     }
 }

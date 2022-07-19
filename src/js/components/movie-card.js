@@ -50,7 +50,7 @@ function movieCardTrailerModal() {
                     <span>Трейлер:</span>
                     <p>${title}</p>
                 </div>
-                <video poster="${video.getAttribute('poster')}" controls class="video-js movie-card-trailer-video vjs-theme-fantasy">
+                <video poster="${video.getAttribute('poster')}" controls class="video-js movie-card-trailer-video vjs-theme-fantasy" preload="metadata">
                     <source src="${video.querySelector('source').getAttribute('src')}" type="${video.querySelector('source').getAttribute('type')}">
                 </video>
             </div>
@@ -174,7 +174,7 @@ function movieCardViewModal() {
                     <span>Смотреть:</span>
                     <p>${title}</p>
                 </div>
-                <video poster="${video.getAttribute('poster')}" controls class="video-js movie-card-view-video vjs-theme-fantasy">
+                <video poster="${video.getAttribute('poster')}" controls class="video-js movie-card-view-video vjs-theme-fantasy" preload="metadata">
                     <source src="${video.querySelector('source').getAttribute('src')}" type="${video.querySelector('source').getAttribute('type')}">
                 </video>
             </div>

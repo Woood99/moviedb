@@ -18,10 +18,8 @@
     }
 
     &__logo {
-        @media (max-width:1200px) {
-            position: relative;
-            z-index: 5;
-        }
+        position: relative;
+        z-index: 5;
     }
 
     &__nav {

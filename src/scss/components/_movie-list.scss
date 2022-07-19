@@ -29,11 +29,11 @@
         }
 
         @media (max-width:$smallTablet) {
-            grid-template-rows: minmax(auto, 300px) max-content;
+            grid-template-rows: minmax(auto, 330px) max-content;
         }
 
         @media (max-width:$mobile) {
-            grid-template-rows: minmax(auto, 215px) max-content;
+            grid-template-rows: minmax(auto, 230px) max-content;
         }
     }
 
@@ -47,24 +47,18 @@
 
     &__name {
         font-weight: 500;
-        font-size: 22px;
+        @include adaptiveValue("font-size", 22,16 );
         line-height: math.div(26, 22);
         transition: color $transitionSpeed $transitionFunction;
-        @media (max-width:$smallTablet) {
-            font-size: 16px;
-            line-height: math.div(19, 16);
-        }
     }
 
     &__descr {
         margin-top: 10px;
-        font-size: 20px;
+        @include adaptiveValue("font-size", 20, 14);
         line-height: math.div(23, 20);
         transition: color $transitionSpeed $transitionFunction;
         @media (max-width:$smallTablet) {
             margin-top: 5px;
-            font-size: 14px;
-            line-height: math.div(16, 14);
         }
     }
 }

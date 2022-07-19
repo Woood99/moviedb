@@ -9,6 +9,7 @@
     <div class="site-container">
         @include('partials/header.html')
         <main class="main grid container">
+            <h1 class="visually-hidden">MOVIEDB - Вам точно понравится!</h1>
             <div class="grid__column grid__column_1">
                 @include('partials/hero.html')
                 @include('partials/best-films.html')
@@ -25,7 +26,14 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-1.jpg" alt="Без жалости">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-1.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-1.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-1.jpg"
+                                                alt="Без жалости">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -45,7 +53,13 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-2.jpg" alt="Спутник">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-2.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-2.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-2.jpg" alt="Спутник">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -65,7 +79,13 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-3.jpg" alt="Кейт">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-3.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-3.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-3.jpg" alt="Кейт">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -85,7 +105,14 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-4.jpg" alt="Чёрная вдова">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-4.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-4.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-4.jpg"
+                                                alt="Чёрная вдова">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -105,7 +132,13 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-5.jpg" alt="2 ствола">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-5.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-5.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-5.jpg" alt="2 ствола">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -135,7 +168,7 @@
                                         style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
                                         <div class="popular-collections-slide__inner">
                                             <h2 class="popular-collections-slide__title">
-                                                Лучшие сериалы 2015-2021 годов1
+                                                Лучшие сериалы 2015-2021 годов
                                             </h2>
                                             <button type="submit" class="btn btn-reset popular-collections-slide__btn">
                                                 Смотреть
@@ -146,7 +179,7 @@
                                         style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
                                         <div class="popular-collections-slide__inner">
                                             <h2 class="popular-collections-slide__title">
-                                                Лучшие сериалы 2015-2021 годов2
+                                                Лучшие сериалы 2015-2021 годов
                                             </h2>
                                             <button type="submit" class="btn btn-reset popular-collections-slide__btn">
                                                 Смотреть
@@ -157,7 +190,7 @@
                                         style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
                                         <div class="popular-collections-slide__inner">
                                             <h2 class="popular-collections-slide__title">
-                                                Лучшие сериалы 2015-2021 годов3
+                                                Лучшие сериалы 2015-2021 годов
                                             </h2>
                                             <button type="submit" class="btn btn-reset popular-collections-slide__btn">
                                                 Смотреть
@@ -168,7 +201,7 @@
                                         style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
                                         <div class="popular-collections-slide__inner">
                                             <h2 class="popular-collections-slide__title">
-                                                Лучшие сериалы 2015-2021 годов4
+                                                Лучшие сериалы 2015-2021 годов
                                             </h2>
                                             <button type="submit" class="btn btn-reset popular-collections-slide__btn">
                                                 Смотреть

@@ -20,6 +20,10 @@
         width: 100%;
         overflow: hidden;
 
+        @media (max-width:$smallTablet) {
+            height: 300px;
+        }
+
         @media (max-width:$mobile) {
             height: 210px;
         }
@@ -47,8 +51,8 @@
             padding: 100px 100px 72px;
             max-width: 400px;
 
-            @media (max-width:$mobile) {
-                max-width: 100px;
+            @media (max-width:$smallTablet) {
+                max-width: 250px;
                 padding: 15px;
             }
         }
@@ -68,12 +72,11 @@
 
     &__text {
         margin-top: 40px;
-        font-size: 20px;
+        @include adaptiveValue("font-size", 20, 14);
         line-height: math.div(23, 20);
 
-        @media (max-width:$mobile) {
+        @media (max-width:$smallTablet) {
             margin-top: 20px;
-            font-size: 14px;
         }
     }
 
@@ -94,17 +97,12 @@
         backdrop-filter: blur(20px);
         border-radius: 5px;
 
-
-        // display: grid;
-        // grid-template-columns: 1fr;
-        // grid-template-rows: max-content max-content;
-        @media (max-width:$mobile) {
+        @media (max-width:$smallTablet) {
             padding: 3px 12px 3px 4px;
             width: 100px;
             height: 44px;
             bottom: 5px;
             right: 5px;
-
         }
     }
 }
@@ -118,14 +116,9 @@
 
     &__left {
         font-weight: 700;
-        font-size: 48px;
+        @include adaptiveValue("font-size", 48, 18);
         line-height: math.div(56, 48);
         color: #E3AC3C;
-
-        @media (max-width:$mobile) {
-            font-size: 18px;
-            line-height: math.div(21, 18);
-        }
     }
 
     &__right {
@@ -133,30 +126,26 @@
 
         >span {
             font-weight: 500;
-            font-size: 16px;
+            @include adaptiveValue("font-size", 16, 12);
             line-height: math.div(19, 16);
             display: block;
         }
 
-        @media (max-width:$mobile) {
+        @media (max-width:$smallTablet) {
             margin-left: 8px;
-
-            >span {
-                font-size: 12px;
-            }
         }
     }
 
     &__rating {
         margin-top: 5px;
 
-        @media (max-width:$mobile) {
+        @media (max-width:$smallTablet) {
             margin-top: 1px;
         }
     }
 
     &__footer {
-        font-size: 16px;
+        @include adaptiveValue("font-size", 16, 10);
         line-height: math.div(19, 16);
 
         span:nth-child(2) {
@@ -166,8 +155,6 @@
         @media (max-width:$mobile) {
             margin-top: 3px;
             margin-left: 35px;
-            font-size: 10px;
-            line-height: math.div(12, 10);
 
             span:nth-child(1) {
                 display: none;

@@ -9,15 +9,14 @@
     <div class="site-container">
         @include('partials/header.html')
         <main class="main grid container">
+            <h1 class="visually-hidden">MOVIEDB - Вам точно понравится!</h1>
             <div class="grid__column grid__column_1">
                 @include('partials/movie-page-hero.html')
                 <section class="movie-card movie-page-card">
                     <div class="movie-card__inner">
                         <div class="movie-card__left">
-
                             <div class="movie-card__view movie-card-view movie-card-page">
                                 <div href="#" class="movie-card-view__inner">
-
                                     <button class="movie-card-view__btn btn btn-reset"
                                         data-graph-path="movie-card-view">
                                         <div class="movie-card-view__hover">
@@ -30,10 +29,8 @@
                                     </button>
                                     <video poster="img/garry-potter-preview.jpg" controls
                                         class="video-js movie-card-view-video" style="display: none;">
-                                        <source src="garry-potter-1_films.mp4" type="video/mp4">
+                                        <source src="video.mp4" type="video/mp4">
                                     </video>
-
-
                                 </div>
                             </div>
                             <div class="movie-card__rating movie-card-rating">
@@ -69,7 +66,7 @@
                                     </button>
                                     <video poster="img/garry-potter-preview.jpg" controls
                                         class="video-js movie-card-trailer-video" style="display: none;">
-                                        <source src="garry-potter-1_trailer.mp4" type="video/mp4">
+                                        <source src="video.mp4" type="video/mp4">
                                     </video>
                                 </div>
                             </div>
@@ -190,7 +187,12 @@
                                     <div class="movie-card-actors__producer">
                                         <div class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-1.jpg" alt="Гай Ричи">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-1.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-1.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-1.jpg" width="41"
+                                                        height="51" alt="Гай Ричи">
+                                                </picture>
                                                 <span>
                                                     Гай Ричи
                                                 </span>
@@ -218,7 +220,12 @@
                                         data-actors-min="3">
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-2.jpg" alt="Джейсон Стэтхэм">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-2.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-2.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-2.jpg" width="41"
+                                                        height="51" alt="Джейсон Стэтхэм">
+                                                </picture>
                                                 <span>
                                                     Джейсон Стэтхэм
                                                 </span>
@@ -226,7 +233,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-3.jpg" alt="Рози Хантингтон">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-3.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-3.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-3.jpg" width="41"
+                                                        height="51" alt="Рози Хантингтон">
+                                                </picture>
                                                 <span>
                                                     Рози Хантингтон
                                                 </span>
@@ -234,7 +246,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-4.jpg" alt="Брюс Уиллис">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-4.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-4.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-4.jpg" width="41"
+                                                        height="51" alt="Брюс Уиллис">
+                                                </picture>
                                                 <span>
                                                     Брюс Уиллис
                                                 </span>
@@ -242,7 +259,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-5.jpg" alt=" Шон Бин">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-5.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-5.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-5.jpg" width="41"
+                                                        height="51" alt="Шон Бин">
+                                                </picture>
                                                 <span>
                                                     Шон Бин
                                                 </span>
@@ -250,7 +272,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-6.jpg" alt="Джони Депп">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-6.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-6.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-6.jpg" width="41"
+                                                        height="51" alt="Джони Депп">
+                                                </picture>
                                                 <span>
                                                     Джони Депп
                                                 </span>
@@ -258,7 +285,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-7.jpg" alt="Кира Найтли">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-7.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-7.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-7.jpg" width="41"
+                                                        height="51" alt="Кира Найтли">
+                                                </picture>
                                                 <span>
                                                     Кира Найтли
                                                 </span>
@@ -266,7 +298,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-8.jpg" alt="Том Круз">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-8.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-8.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-8.jpg" width="41"
+                                                        height="51" alt="Том Круз">
+                                                </picture>
                                                 <span>
                                                     Том Круз
                                                 </span>
@@ -274,7 +311,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-2.jpg" alt="Джейсон Стэтхэм">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-2.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-2.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-2.jpg" width="41"
+                                                        height="51" alt="Джейсон Стэтхэм">
+                                                </picture>
                                                 <span>
                                                     Джейсон Стэтхэм
                                                 </span>
@@ -282,7 +324,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-3.jpg" alt="Рози Хантингтон">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-3.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-3.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-3.jpg" width="41"
+                                                        height="51" alt="Рози Хантингтон">
+                                                </picture>
                                                 <span>
                                                     Рози Хантингтон
                                                 </span>
@@ -290,7 +337,12 @@
                                         </li>
                                         <li class="movie-card-actors__item movie-card-actors-item">
                                             <a href="#" class="movie-card-actors-item__inner">
-                                                <img src="img/actors/actors-4.jpg" alt="Брюс Уиллис">
+                                                <picture>
+                                                    <source srcset="img/actors/actors-4.avif" type="image/avif">
+                                                    <source srcset="img/actors/actors-4.webp" type="image/webp">
+                                                    <img loading="lazy" src="img/actors/actors-4.jpg" width="41"
+                                                        height="51" alt="Брюс Уиллис">
+                                                </picture>
                                                 <span>
                                                     Брюс Уиллис
                                                 </span>
@@ -311,79 +363,132 @@
                 @include('partials/new-similar-films.html')
                 @include('partials/all-related-films.html')
                 <section class="movie-in-collections">
-                    <section class="movie-in-collections">
-                        <h2 class="movie-in-collections__title title-2">
-                            Этот фильм в подборках:
-                        </h2>
-                        <ul class="movie-in-collections__list list-reset">
-                            <li class="movie-in-collections__item movie-in-collections-item">
-                                <a href="#" class="movie-in-collections-item__inner">
-                                    <img src="img/movie-in-collections/movie-in-collections-1.jpg" alt="Фильмы про настоящих безумцев">
-                                    <p class="movie-in-collections-item__descr">
-                                        Фильмы про настоящих безумцев
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="movie-in-collections__item movie-in-collections-item">
-                                <a href="#" class="movie-in-collections-item__inner">
-                                    <img src="img/movie-in-collections/movie-in-collections-2.jpg" alt="Жили долго и счастливо">
-                                    <p class="movie-in-collections-item__descr">
-                                        Жили долго и счастливо
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="movie-in-collections__item movie-in-collections-item">
-                                <a href="#" class="movie-in-collections-item__inner">
-                                    <img src="img/movie-in-collections/movie-in-collections-3.jpg" alt="Темная сторона правосудия">
-                                    <p class="movie-in-collections-item__descr">
-                                        Темная сторона правосудия
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="movie-in-collections__item movie-in-collections-item">
-                                <a href="#" class="movie-in-collections-item__inner">
-                                    <img src="img/movie-in-collections/movie-in-collections-4.jpg" alt="Фильмы про Марс">
-                                    <p class="movie-in-collections-item__descr">
-                                        Фильмы про Марс
-                                    </p>
-                                </a>
-                            </li>
+                    <h2 class="movie-in-collections__title title-2">
+                        Этот фильм в подборках:
+                    </h2>
+                    <ul class="movie-in-collections__list list-reset">
+                        <li class="movie-in-collections__item movie-in-collections-item">
+                            <a href="#" class="movie-in-collections-item__inner">
+                                <picture>
+                                    <source srcset="img/movie-in-collections/movie-in-collections-1.avif"
+                                        type="image/avif">
+                                    <source srcset="img/movie-in-collections/movie-in-collections-1.webp"
+                                        type="image/webp">
+                                    <img loading="lazy" src="img/movie-in-collections/movie-in-collections-1.jpg"
+                                        alt="Фильмы про настоящих безумцев">
+                                </picture>
+                                <p class="movie-in-collections-item__descr">
+                                    Фильмы про настоящих безумцев
+                                </p>
+                            </a>
+                        </li>
+                        <li class="movie-in-collections__item movie-in-collections-item">
+                            <a href="#" class="movie-in-collections-item__inner">
+                                <picture>
+                                    <source srcset="img/movie-in-collections/movie-in-collections-2.avif"
+                                        type="image/avif">
+                                    <source srcset="img/movie-in-collections/movie-in-collections-2.webp"
+                                        type="image/webp">
+                                    <img loading="lazy" src="img/movie-in-collections/movie-in-collections-2.jpg"
+                                        alt="Жили долго и счастливо">
+                                </picture>
+                                <p class="movie-in-collections-item__descr">
+                                    Жили долго и счастливо
+                                </p>
+                            </a>
+                        </li>
+                        <li class="movie-in-collections__item movie-in-collections-item">
+                            <a href="#" class="movie-in-collections-item__inner">
+                                <picture>
+                                    <source srcset="img/movie-in-collections/movie-in-collections-3.avif"
+                                        type="image/avif">
+                                    <source srcset="img/movie-in-collections/movie-in-collections-3.webp"
+                                        type="image/webp">
+                                    <img loading="lazy" src="img/movie-in-collections/movie-in-collections-3.jpg"
+                                        alt="Темная сторона правосудия">
+                                </picture>
+                                <p class="movie-in-collections-item__descr">
+                                    Темная сторона правосудия
+                                </p>
+                            </a>
+                        </li>
+                        <li class="movie-in-collections__item movie-in-collections-item">
+                            <a href="#" class="movie-in-collections-item__inner">
+                                <picture>
+                                    <source srcset="img/movie-in-collections/movie-in-collections-4.avif"
+                                        type="image/avif">
+                                    <source srcset="img/movie-in-collections/movie-in-collections-4.webp"
+                                        type="image/webp">
+                                    <img loading="lazy" src="img/movie-in-collections/movie-in-collections-4.jpg"
+                                        width="" height="" alt="Фильмы про Марс">
+                                </picture>
+                                <p class="movie-in-collections-item__descr">
+                                    Фильмы про Марс
+                                </p>
+                            </a>
+                        </li>
 
-                            <li class="movie-in-collections__item movie-in-collections-item">
-                                <a href="#" class="movie-in-collections-item__inner">
-                                    <img src="img/movie-in-collections/movie-in-collections-2.jpg" alt="Жили долго и счастливо">
-                                    <p class="movie-in-collections-item__descr">
-                                        Жили долго и счастливо
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="movie-in-collections__item movie-in-collections-item">
-                                <a href="#" class="movie-in-collections-item__inner">
-                                    <img src="img/movie-in-collections/movie-in-collections-4.jpg" alt="Фильмы про Марс">
-                                    <p class="movie-in-collections-item__descr">
-                                        Фильмы про Марс
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="movie-in-collections__item movie-in-collections-item">
-                                <a href="#" class="movie-in-collections-item__inner">
-                                    <img src="img/movie-in-collections/movie-in-collections-1.jpg" alt="Фильмы про настоящих безумцев">
-                                    <p class="movie-in-collections-item__descr">
-                                        Фильмы про настоящих безумцев
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="movie-in-collections__item movie-in-collections-item">
-                                <a href="#" class="movie-in-collections-item__inner">
-                                    <img src="img/movie-in-collections/movie-in-collections-3.jpg" alt="Темная сторона правосудия">
-                                    <p class="movie-in-collections-item__descr">
-                                        Темная сторона правосудия
-                                    </p>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                    
+                        <li class="movie-in-collections__item movie-in-collections-item">
+                            <a href="#" class="movie-in-collections-item__inner">
+                                <picture>
+                                    <source srcset="img/movie-in-collections/movie-in-collections-2.avif"
+                                        type="image/avif">
+                                    <source srcset="img/movie-in-collections/movie-in-collections-2.webp"
+                                        type="image/webp">
+                                    <img loading="lazy" src="img/movie-in-collections/movie-in-collections-2.jpg"
+                                        alt="Жили долго и счастливо">
+                                </picture>
+                                <p class="movie-in-collections-item__descr">
+                                    Жили долго и счастливо
+                                </p>
+                            </a>
+                        </li>
+                        <li class="movie-in-collections__item movie-in-collections-item">
+                            <a href="#" class="movie-in-collections-item__inner">
+                                <picture>
+                                    <source srcset="img/movie-in-collections/movie-in-collections-4.avif"
+                                        type="image/avif">
+                                    <source srcset="img/movie-in-collections/movie-in-collections-4.webp"
+                                        type="image/webp">
+                                    <img loading="lazy" src="img/movie-in-collections/movie-in-collections-4.jpg"
+                                        width="" height="" alt="Фильмы про Марс">
+                                </picture>
+                                <p class="movie-in-collections-item__descr">
+                                    Фильмы про Марс
+                                </p>
+                            </a>
+                        </li>
+                        <li class="movie-in-collections__item movie-in-collections-item">
+                            <a href="#" class="movie-in-collections-item__inner">
+                                <picture>
+                                    <source srcset="img/movie-in-collections/movie-in-collections-1.avif"
+                                        type="image/avif">
+                                    <source srcset="img/movie-in-collections/movie-in-collections-1.webp"
+                                        type="image/webp">
+                                    <img loading="lazy" src="img/movie-in-collections/movie-in-collections-1.jpg"
+                                        alt="Фильмы про настоящих безумцев">
+                                </picture>
+                                <p class="movie-in-collections-item__descr">
+                                    Фильмы про настоящих безумцев
+                                </p>
+                            </a>
+                        </li>
+                        <li class="movie-in-collections__item movie-in-collections-item">
+                            <a href="#" class="movie-in-collections-item__inner">
+                                <picture>
+                                    <source srcset="img/movie-in-collections/movie-in-collections-3.avif"
+                                        type="image/avif">
+                                    <source srcset="img/movie-in-collections/movie-in-collections-3.webp"
+                                        type="image/webp">
+                                    <img loading="lazy" src="img/movie-in-collections/movie-in-collections-3.jpg"
+                                        alt="Темная сторона правосудия">
+                                </picture>
+                                <p class="movie-in-collections-item__descr">
+                                    Темная сторона правосудия
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
                 </section>
             </div>
             <div class="grid__column grid__column_2">
@@ -396,7 +501,14 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-1.jpg" alt="Без жалости">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-1.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-1.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-1.jpg"
+                                                alt="Без жалости">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -416,7 +528,13 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-2.jpg" alt="Спутник">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-2.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-2.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-2.jpg" alt="Спутник">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -436,7 +554,13 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-3.jpg" alt="Кейт">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-3.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-3.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-3.jpg" alt="Кейт">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -456,7 +580,14 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-4.jpg" alt="Чёрная вдова">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-4.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-4.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-4.jpg"
+                                                alt="Чёрная вдова">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -476,7 +607,13 @@
                             <li class="related-collections__item related-collections-item">
                                 <a href="#" class="related-collections-item__wrapper">
                                     <div class="related-collections-item__img">
-                                        <img src="img/related-collections/related-collections-5.jpg" alt="2 ствола">
+                                        <picture>
+                                            <source srcset="img/related-collections/related-collections-5.avif"
+                                                type="image/avif">
+                                            <source srcset="img/related-collections/related-collections-5.webp"
+                                                type="image/webp">
+                                            <img src="img/related-collections/related-collections-5.jpg" alt="2 ствола">
+                                        </picture>
                                     </div>
                                     <div class="related-collections-item__content">
                                         <div class="related-collections-item__header">
@@ -506,7 +643,7 @@
                                         style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
                                         <div class="popular-collections-slide__inner">
                                             <h2 class="popular-collections-slide__title">
-                                                Лучшие сериалы 2015-2021 годов1
+                                                Лучшие сериалы 2015-2021 годов
                                             </h2>
                                             <button type="submit" class="btn btn-reset popular-collections-slide__btn">
                                                 Смотреть
@@ -517,7 +654,7 @@
                                         style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
                                         <div class="popular-collections-slide__inner">
                                             <h2 class="popular-collections-slide__title">
-                                                Лучшие сериалы 2015-2021 годов2
+                                                Лучшие сериалы 2015-2021 годов
                                             </h2>
                                             <button type="submit" class="btn btn-reset popular-collections-slide__btn">
                                                 Смотреть
@@ -528,7 +665,7 @@
                                         style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
                                         <div class="popular-collections-slide__inner">
                                             <h2 class="popular-collections-slide__title">
-                                                Лучшие сериалы 2015-2021 годов3
+                                                Лучшие сериалы 2015-2021 годов
                                             </h2>
                                             <button type="submit" class="btn btn-reset popular-collections-slide__btn">
                                                 Смотреть
@@ -539,7 +676,7 @@
                                         style="background-image: url(img/popular-collections/popular-collections-1.jpg);">
                                         <div class="popular-collections-slide__inner">
                                             <h2 class="popular-collections-slide__title">
-                                                Лучшие сериалы 2015-2021 годов4
+                                                Лучшие сериалы 2015-2021 годов
                                             </h2>
                                             <button type="submit" class="btn btn-reset popular-collections-slide__btn">
                                                 Смотреть

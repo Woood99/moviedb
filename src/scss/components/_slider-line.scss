@@ -2,8 +2,9 @@
     &__inner {
         margin-top: 40px;
         position: relative;
-        @media (max-width:$mobile){
-            margin-top: 20px;  
+
+        @media (max-width:$smallTablet) {
+            margin-top: 20px;
         }
     }
 }
@@ -41,6 +42,7 @@
         height: 381px;
         position: relative;
 
+        >picture>img,
         >img {
             width: 100%;
             height: 100%;
@@ -62,14 +64,17 @@
                 display: none;
             }
         }
-        @media (max-width:$mobile){
-             height: 320px; 
+
+        @media (max-width:$mobile) {
+            height: 320px;
         }
-        @media (max-width:450px){
-             height: 250px; 
+
+        @media (max-width:450px) {
+            height: 250px;
         }
-        @media (max-width:360px){
-              height: 215px;
+
+        @media (max-width:360px) {
+            height: 215px;
         }
     }
 
@@ -82,23 +87,21 @@
     &__name {
         margin-top: 20px;
         font-weight: 500;
-        font-size: 22px;
+        @include adaptiveValue("font-size", 22, 16);
         line-height: math.div(26, 22);
 
         @media (max-width:$smallTablet) {
             margin-top: 10px;
-            font-size: 16px;
         }
     }
 
     &__descr {
         margin-top: 10px;
-        font-size: 20px;
+        @include adaptiveValue("font-size", 20, 14);
         line-height: math.div(23, 20);
 
         @media (max-width:$smallTablet) {
             margin-top: 6px;
-            font-size: 14px;
         }
     }
 
@@ -140,6 +143,8 @@
         width: 71px;
         height: 34px;
         border-radius: 0px 5px 5px 0px;
+        @include adaptiveValue("font-size", 18, 12);
+        line-height: math.div(14, 12);
 
         img {
             width: 50%;
@@ -154,8 +159,6 @@
         @media (max-width:$mobile) {
             width: 43px;
             height: 21px;
-            font-size: 12px;
-            line-height: math.div(14, 12);
 
             span {
                 padding: 4px 3px 3px 2px;

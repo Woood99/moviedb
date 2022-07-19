@@ -51,13 +51,11 @@
     &__descr {
         margin-top: 20px;
         font-weight: 500;
-        font-size: 22px;
+        @include adaptiveValue("font-size", 22, 16);
         line-height: math.div(26, 22);
         transition: color $transitionSpeed $transitionFunction;
         @media (max-width:$smallTablet) {
             margin-top: 10px;
-            font-size: 16px;
-            line-height: math.div(19, 16);
         }
     }
 }

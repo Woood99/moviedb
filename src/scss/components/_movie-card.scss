@@ -7,7 +7,7 @@
 
     &__counter {
         font-weight: 700;
-        font-size: 87px;
+        @include adaptiveValue("font-size", 87, 37);
         line-height: math.div(102, 87);
         color: #727272;
         position: relative;
@@ -15,7 +15,6 @@
 
         @media (max-width:1200px) {
             text-align: center;
-            font-size: 37px;
             line-height: math.div(43, 37);
             bottom: -10px;
         }
@@ -42,9 +41,11 @@
 
     &__view {
         height: 666px;
+
         @media (max-width:1400px) {
             height: 500px;
         }
+
         @media (max-width:1200px) {
             align-self: center;
             height: 300px;
@@ -97,24 +98,17 @@
 
     &__title {
         font-weight: 500;
-        font-size: 40px;
+        @include adaptiveValue("font-size", 20, 18);
         line-height: math.div(47, 40);
-
-        @media (max-width:$smallTablet) {
-            font-size: 18px;
-            line-height: math.div(21, 18);
-        }
     }
 
     &__subtitle {
         margin-top: 15px;
-        font-size: 30px;
+        @include adaptiveValue("font-size", 30, 16);
         line-height: math.div(35, 30);
 
         @media (max-width:$smallTablet) {
             margin-top: 8px;
-            font-size: 16px;
-            line-height: math.div(19, 16);
         }
     }
 
@@ -219,13 +213,13 @@
         padding: 0 20px;
 
         span {
-            font-size: 16px;
+            @include adaptiveValue("font-size", 16, 14);
             line-height: math.div(19, 16);
             margin-left: 40px;
         }
 
         p {
-            font-size: 16px;
+            @include adaptiveValue("font-size", 16, 14);
             line-height: math.div(19, 16);
             margin-left: 10px;
         }
@@ -235,13 +229,9 @@
 
             span {
                 margin-left: 20px;
-                font-size: 14px;
-                line-height: math.div(16, 14);
             }
 
             p {
-                font-size: 14px;
-                line-height: math.div(16, 14);
                 margin-left: 5px;
                 white-space: nowrap;
                 overflow: hidden;
@@ -297,11 +287,11 @@
                 opacity: 1;
             }
         }
-
+        >picture>img,
         >img {
-            display: block;
             width: 100%;
             height: 100%;
+            display: block;
             border-radius: 5px;
         }
     }
@@ -342,7 +332,7 @@
         span {
             display: block;
             margin-top: 14px;
-            font-size: 20px;
+            @include adaptiveValue("font-size", 20, 14);
             line-height: math.div(23, 20);
             color: $whiteColor;
         }
@@ -357,8 +347,6 @@
 
             span {
                 margin-top: 9px;
-                font-size: 14px;
-                line-height: math.div(16, 14);
             }
         }
     }
@@ -415,33 +403,15 @@
 
         span:nth-child(1) {
             font-weight: 700;
-            font-size: 28px;
+            @include adaptiveValue("font-size", 28, 18);
             line-height: math.div(33, 28);
-
-            @media (max-width:$md1700) {
-                font-size: 26px;
-            }
-
-            @media (max-width:$smallTablet) {
-                font-size: 18px;
-                line-height: math.div(21, 18);
-            }
         }
 
         span:nth-child(2) {
             margin-top: 3px;
             font-weight: 500;
-            font-size: 16px;
+            @include adaptiveValue("font-size", 16, 10);
             line-height: math.div(19, 16);
-
-            @media (max-width:$md1700) {
-                font-size: 14px;
-            }
-
-            @media (max-width:$smallTablet) {
-                font-size: 10px;
-                line-height: math.div(12, 10);
-            }
         }
     }
 
@@ -462,26 +432,23 @@
 
         span:nth-child(1) {
             font-weight: 700;
-            font-size: 20px;
+            @include adaptiveValue("font-size", 20, 14);
             line-height: math.div(23, 20);
 
             @media (max-width:$smallTablet) {
                 font-weight: 700;
-                font-size: 14px;
-                line-height: math.div(22, 14);
             }
         }
 
         span:nth-child(2) {
             margin-top: 10px;
+            @include adaptiveValue("font-size", 18, 14);
 
             @media (max-width:$md1700) {
                 margin-top: 0;
             }
 
             @media (max-width:$smallTablet) {
-                font-size: 14px;
-                line-height: math.div(16, 14);
                 text-align: right;
             }
         }
@@ -520,21 +487,14 @@
         display: grid;
         grid-template-columns: minmax(300px, max-content) 1fr;
         grid-column-gap: 15px;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(16, 14);
 
         span:nth-child(1) {
             font-weight: 700;
 
             @media (max-width:$smallTablet) {
                 align-self: center;
-                font-size: 14px;
-                line-height: math.div(16, 14);
-            }
-        }
-
-        span:nth-child(2) {
-            @media (max-width:$smallTablet) {
-                font-size: 14px;
-                line-height: math.div(16, 14);
             }
         }
 
@@ -585,17 +545,13 @@
 
     &__title {
         font-weight: 500;
-        font-size: 22px;
+        @include adaptiveValue("font-size", 22, 16);
         line-height: math.div(26, 22);
-
-        @media (max-width:$smallTablet) {
-            font-size: 16px;
-            line-height: math.div(19, 16);
-        }
     }
 
     &__descr {
         margin-top: 15px;
+        @include adaptiveValue("font-size", 18, 14);
 
         p {
             &:not(:first-child) {
@@ -609,7 +565,6 @@
 
         @media (max-width:$smallTablet) {
             margin-top: 15px;
-            font-size: 14px;
         }
 
         @media (max-width:$smallTablet) {
@@ -631,6 +586,8 @@
         transition: color $transitionSpeed $transitionFunction;
         color: $lightBlueColor;
         text-decoration: underline;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(16, 14);
 
         &:hover {
             color: $whiteColor;
@@ -638,8 +595,6 @@
 
         @media (max-width:$smallTablet) {
             margin-top: 15px;
-            font-size: 14px;
-            line-height: math.div(16, 14);
         }
     }
 }
@@ -677,16 +632,13 @@
         display: flex;
         align-items: center;
         padding: 0 20px;
-
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: math.div(19, 16);
         span {
-            font-size: 16px;
-            line-height: math.div(19, 16);
             margin-left: 40px;
         }
 
         p {
-            font-size: 16px;
-            line-height: math.div(19, 16);
             margin-left: 10px;
         }
 
@@ -695,13 +647,9 @@
 
             span {
                 margin-left: 20px;
-                font-size: 14px;
-                line-height: math.div(16, 14);
             }
 
             p {
-                font-size: 14px;
-                line-height: math.div(16, 14);
                 margin-left: 5px;
                 white-space: nowrap;
                 overflow: hidden;
@@ -758,7 +706,7 @@
         span {
             display: block;
             margin-top: 9px;
-            font-size: 14px;
+            @include adaptiveValue("font-size", 14, 12);
             line-height: math.div(16, 14);
             color: $whiteColor;
         }
@@ -768,16 +716,11 @@
                 width: 44px;
                 height: 33px;
             }
-
-            span {
-                font-size: 12px;
-                line-height: math.div(14, 12);
-            }
         }
     }
 
     &__time {
-        font-size: 16px;
+        @include adaptiveValue("font-size", 16, 12);
         line-height: math.div(19, 16);
         color: #A4A4A4;
         display: block;
@@ -785,11 +728,6 @@
         bottom: 10px;
         right: 10px;
         z-index: 100;
-
-        @media (max-width:$mobile) {
-            font-size: 12px;
-            line-height: math.div(14, 12);
-        }
     }
 }
 
@@ -971,11 +909,10 @@
         font-weight: 500;
         color: #A4A4A4;
         margin-bottom: 20px;
-
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(16, 14);
         @media (max-width:$mobile) {
             margin-bottom: 10px;
-            font-size: 14px;
-            line-height: math.div(16, 14);
         }
     }
 
@@ -1010,10 +947,8 @@
         }
 
         span {
-            @media (max-width:$mobile) {
-                font-size: 14px;
-                line-height: math.div(16, 14);
-            }
+            @include adaptiveValue("font-size", 18, 14);
+            line-height: math.div(16, 14);
         }
 
         span:nth-child(1) {
@@ -1046,14 +981,10 @@
         color: $lightBlueColor;
         text-decoration-line: underline;
         transition: color $transitionSpeed $transitionFunction;
-
+        @include adaptiveValue("font-size", 18 , 14);
+        line-height: math.div(16, 14);
         &:hover {
             color: $whiteColor;
-        }
-
-        @media (max-width:$mobile) {
-            font-size: 14px;
-            line-height: math.div(16, 14);
         }
     }
 }
@@ -1076,12 +1007,9 @@
             display: block;
             padding: 0 10px;
             transition: color $transitionSpeed $transitionFunction;
-
+            @include adaptiveValue("font-size", 18,14);
+            line-height: math.div(16, 14);
             @media (max-width:$mobile) {
-                font-size: 14px;
-                line-height: math.div(16, 14);
-
-
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
